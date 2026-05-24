@@ -1,0 +1,143 @@
+/* NEW PROJECT CARD */
+.card {
+    position: relative;
+    background: #fffdf8;
+    border: 1px solid #ded8ca;
+    border-radius: 14px;
+    padding: 2.4rem;
+    width: min(860px, 72vw);
+    min-height: 210px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 18px 45px rgba(46, 54, 40, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #f0a63a;
+    background: #ffffff;
+    box-shadow: 0 24px 55px rgba(46, 54, 40, 0.14);
+}
+
+/* BADGE */
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0d6;
+    color: #9a4d0c;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid #ffd79a;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+}
+
+.card:hover .badge {
+    background: #ffe3b3;
+    color: #7c3f10;
+    border-color: #f8bd66;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(217, 119, 6, 0.16);
+}
+
+/* TEXT */
+.heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #252820;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01em;
+}
+
+.sub {
+    color: #626958;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+}
+
+/* CTA BUTTON */
+.cta {
+    background: #d97706;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 18px rgba(217, 119, 6, 0.24);
+}
+
+.cta:hover {
+    background: #b85c08;
+    box-shadow: 0 10px 22px rgba(217, 119, 6, 0.3);
+}
+
+/* GLOW EFFECT */
+.glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: radial-gradient(circle at 50% 0%,
+            rgba(217, 119, 6, 0.14),
+            transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .glow {
+    opacity: 1;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .card {
+        width: 88vw;
+        height: auto;
+        min-height: 240px;
+        padding: 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    .badge {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .cta {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
