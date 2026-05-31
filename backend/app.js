@@ -12,7 +12,7 @@ app.use(
         origin: [
             "http://localhost:5173",
             "http://127.0.0.1:5173",
-            "https://excalidraw-eight-mu.vercel.app"
+            "https://excalidraw-opal-ten.vercel.app/"
         ],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
